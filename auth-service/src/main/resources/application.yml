@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: service-auth
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url:  jdbc:mysql://localhost:3306/spring_security?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+server:
+  port: 5000
+  context-path: /uaa
+security:
+  oauth2:
+    resource:
+      filter-order: 3
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8760/eureka/
+logging:
+  level: debug
